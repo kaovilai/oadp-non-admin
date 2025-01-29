@@ -8,11 +8,11 @@ This aids in review of the document as changes to a line are not obscured by the
 We want to provide a way for Non Admins (NAs) to debug their non admin backup (NAB) and/or non admin restore (NAR).
 
 ## Background
-A backup/restore operation may not always succeed in part, or in full. User would like a way to diagnose their backup or restore based on information available on object store uploaded by Velero during its backup or restore process.
+A backup/restore operation may not always succeed in part, or in full. Non Admin User would like a way to diagnose their backup or restore based on information available on object store uploaded by Velero during its backup or restore process.
 
 ## Goals
 
-- Make available a path or url to debug information on NAB and NAR statuses which allows credentialed user of object store to access debug information.
+- Provide a path or url to debug information on NAB and NAR statuses, allowing credentialed object store users to access debug information.
 
 ## Non Goals
 
@@ -46,6 +46,7 @@ Other users who share this bucket are also assumed to be similarly privileged an
 ## Compatibility
 
 A new status field(s) will need to be added to NAB/NAR to expose debug info path.
+This includes updates to the CRD within oadp-operator project as well.
 
 ## Implementation
 <!-- A description of the implementation, timelines, and any resources that have agreed to contribute. -->
